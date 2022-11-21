@@ -1,3 +1,3 @@
-Play the popular word game Wordle, but with MLW players!
+A MLW player guessing game inspired by Wordle.
 
 Fork of https://github.com/vrajpatel-18/poeltl-unlimited
