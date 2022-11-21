@@ -482,7 +482,7 @@ function DrewDavis(){
     team: "Cobras",
     number: 2,
     league: "AL",
-    allstargameappearances: 0,
+    allstargameappearances: 6,
     worldserieswins: 0,
     started:2016
   };
