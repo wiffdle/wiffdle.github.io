@@ -1,0 +1,8 @@
+{
+  "name": "mlwwordle",
+  "description": "guess mlw players",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  }
+}

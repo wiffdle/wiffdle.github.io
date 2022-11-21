@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>MLW Wordle - Play Now!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="wordle.css">
+    <script src="wordle.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+<link rel="icon" type="image/x-icon" href="ico.ico">
+
+
+</head>
+
+<body class="body" id="body">
+    <div class="turnyourphone">
+    <h1 class="logo">MLW Wordle</h1>
+    <img style="border-radius: 20px;" src="rotateyourdevice.gif"/>
+    <h1>Please rotate your device to begin playing!</h1>
+    </div>
+    <div class="mainexperience">
+    <i onclick="DarkMode()" class="fa-solid fa-paint-roller"></i>    
+    <h1 class="logo">MLW Wordle</h1>
+    <p class="legal" style="margin:0px; color:#787c7e">Forked from <a target="_blank" style="color:#787c7e" href="https://github.com/vrajpatel-18/poeltl-unlimited">Poeltl Unlimited</a></p>
+    <br>
+    <div id="container">
+        <input type="text" placeholder="Guess" class="guess hidden"/>
+        <div id="results"></div>
+    </div>
+    <center>
+    <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 id="modalHeader" style="padding:0;">Header</h1>
+        <img id="playerImage" src=""/>
+        <h2 id="modalName style="padding:0;"></h2>
+        <br>
+        <button id="playAgain" style="padding:0;" class="hidden">Play Again</button>
+    </div>
+    </center>
+    <button class="btn hidden"  style="display: none;" disabled="true"></button>
+    <h1 id="message"></h1>
+    <br>
+
+        <div id="label"></div>
+        <div id="board"></div>
+
+    <div class="overlay hidden"></div>
+    <img id="explainer" class="explainer" src="explainer.gif"/>
+    </div>
+</body>
+
+</html>
