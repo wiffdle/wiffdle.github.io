@@ -95,13 +95,16 @@ function getPlayer(guessName){
 function DarkMode()
 {
   Background = document.querySelector("body");
+  Logo = document.querySelector("logo");
   if(Background.classList.contains("Dark")){
     Background.classList.add("Light");
+    Logo.src="logo.png";
     Background.classList.remove("Dark");
   }
   else{
     Background.classList.add("Dark");
     Background.classList.remove("Light");
+    Logo.src="darklogo.png";
   }
 }
 
