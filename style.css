@@ -16,7 +16,6 @@ body {
 }
 
 .logo{
-  font-family: karnakpro-condensedblack;
   letter-spacing: 2px;
   font-size: 50px;
   padding-top:20px;
@@ -24,10 +23,7 @@ body {
   margin-bottom: 0px;
 }
 
-@font-face {
-  font-family: karnakpro-condensedblack;
-  src: url(karnakpro-condensedblack.ttf);
-}
+
 
 hr {
   width: 500px;
