@@ -441,4 +441,5 @@ li{
 .explainer{
   margin-top:30px;
   border-radius: 20px;
+  z-index:-10;
 }
