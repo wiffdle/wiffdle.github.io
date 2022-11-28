@@ -660,7 +660,7 @@ function JimmyKnorp(){
     number: 7,
     league: "NL",
     allstargameappearances: 3,
-    worldserieswins: 1,
+    worldserieswins: 2,
     started:2020
   };
 }
@@ -671,7 +671,7 @@ function JonahHeath(){
     number: 7,
     league: "NL",
     allstargameappearances: 3,
-    worldserieswins: 1,
+    worldserieswins: 2,
     started:2020
   };
 }
@@ -682,7 +682,7 @@ function MichaelSchema(){
     number: 31,
     league: "NL",
     allstargameappearances: 0,
-    worldserieswins: 1,
+    worldserieswins: 2,
     started:2021
   };
 }
@@ -693,7 +693,7 @@ function CaseyBennet(){
     number: 4,
     league: "NL",
     allstargameappearances: 0,
-    worldserieswins: 0,
+    worldserieswins: 1,
     started:2022
   };
 }
@@ -704,7 +704,7 @@ function TreyFlood(){
     number: 3,
     league: "NL",
     allstargameappearances: 0,
-    worldserieswins: 0,
+    worldserieswins: 1,
     started:2022
   };
 }
