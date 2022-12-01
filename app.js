@@ -63,16 +63,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function closeModal(){
-    document.querySelector(".modal").classList.add("hidden");
-    document.querySelector(".overlay").classList.add("hidden");
-}
-
-function openModal(){
-    document.querySelector(".modal").classList.remove("hidden");
-    document.querySelector(".overlay").classList.remove("hidden");
-}
-
 
 function getRandomPlayer(){
     let pName = playerList[getRandomInt(0,playerList.length)].replace(/\s/g, "").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'');
@@ -163,9 +153,7 @@ function init(){
   document.querySelector(".guess").addEventListener("keydown", (e) => {
       processInput(e);
   });
-  document.querySelector(".close-modal").addEventListener("click",closeModal);
-  document.querySelector(".overlay").addEventListener("click", closeModal);
-  document.querySelector(".btn").addEventListener("click", openModal);
+
 
   document.querySelector(".guess").addEventListener("input", (e) => {
       playersArray = [];
