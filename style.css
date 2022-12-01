@@ -75,6 +75,7 @@ hr {
   left: 0;
   right: 0;
   margin: auto;
+  z-index:100;
 }
 
 #container{
@@ -443,3 +444,4 @@ li{
   border-radius: 20px;
   z-index:-10;
 }
+
