@@ -76,9 +76,6 @@ hr {
   right: 0;
   margin: auto;
   z-index:100;
-  background-color:#ffffff;
-  border: 1px solid #000000;
-  border-radius:10px;
 }
 
 #container{
