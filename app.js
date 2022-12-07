@@ -82,16 +82,39 @@ function getPlayer(guessName){
     }
 }
 
-function DarkMode()
-{
+document.addEventListener('DOMContentLoaded', function() {
+  checkmode();
+}, false);
+
+function checkmode() {
   Background = document.querySelector("body");
-  if(Background.classList.contains("Dark")){
+  const url = window.location.toString();
+  if (url.includes('?dark')) {
+    Background.classList.add("Dark");
+    Background.classList.remove("Light");
+  }
+  else {
     Background.classList.add("Light");
     Background.classList.remove("Dark");
   }
-  else{
+}
+
+function DarkMode()
+{
+  Background = document.querySelector("body");
+  if (Background.classList.contains("Dark")) {
+    Background.classList.add("Light");
+    Background.classList.remove("Dark");
+    let stateObj = { id: "100" };
+    window.history.pushState(stateObj,
+      "Page", "/?light");
+  }
+  else {
     Background.classList.add("Dark");
     Background.classList.remove("Light");
+    let stateObj = { id: "100" };
+    window.history.pushState(stateObj,
+      "Page", "/?dark");
   }
 }
 
