@@ -153,6 +153,7 @@ hr {
 .end-tile {
   /* Box */
   border: 1px solid #3D3D3D;
+  border-right: 1px solid #3D3D3D;
   width: 150px;
   height: 100px;
 
