@@ -147,6 +147,9 @@ function createRow(rowNum){
         if(c == 0){
             tile.classList.add("name-tile");
         }
+        else if(c == 6){
+          tile.classList.add("end-tile");
+        }
         else{
             tile.classList.add("tile");
         }
