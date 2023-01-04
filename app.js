@@ -139,7 +139,7 @@ function createLabel(){
 }
 
 function createRow(rowNum){
-    document.getElementById("board").style.height += 100;
+    document.getElementById("board").style.height += 110;
     let r = rowNum;
     for(let c = 0; c < 7; c++){
         let tile = document.createElement("span");
