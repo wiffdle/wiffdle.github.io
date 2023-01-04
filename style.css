@@ -98,14 +98,14 @@ hr {
 .label-tile {
   /* Box */
   border: transparent;
-  border-bottom: 1px solid #333;
+
   width: 150px;
   height: 15px;
   margin-left: 1px;
   margin-right: 1px;
 
   /* Text */
-  color: #333;
+  color: #3D3D3D;
   font-size: 20px;
   padding-bottom:10px;
   font-weight: none;
@@ -117,14 +117,14 @@ hr {
 .label-tile-first {
   /* Box */
   border: transparent;
-  border-bottom: 1px solid #333;
+
   width: 265px;
   height: 15px;
   margin-left: 1px;
   margin-right: 1px;
 
   /* Text */
-  color: #333;
+  color: #3D3D3D;
   font-size: 20px;
   padding-bottom:10px;
   font-weight: none;
@@ -135,42 +135,60 @@ hr {
 
 .tile {
   /* Box */
-  border: 1px solid lightgray;
+  border: 1px solid #3D3D3D;
+  border-right:0px;
+
   width: 150px;
   height: 100px;
 
   /* Text */
-  color: black;
+  color: #3D3D3D;
   font-size: 20px;
   font-weight: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+}
+
+.end-tile {
+  /* Box */
+  border: 1px solid #3D3D3D;
+  width: 150px;
+  height: 100px;
+
+  /* Text */
+  color: #3D3D3D;
+  font-size: 20px;
+  font-weight: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .name-tile {
   /* Box */
-  border: 1px solid lightgray;
+  border: 1px solid #3D3D3D;
+  border-right:0px;
   width: 250px;
   height: 100px;
 
   /* Text */
-  color: black;
+  color: #3D3D3D;
   font-size: 20px;
   font-weight: none;
   display: flex;
   justify-content: left;
   align-items: center;
   padding-left: 15px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .correct {
   background-color: #4dae50;
   color: white;
-  border-color: white;
-  border-radius: 10px;
   animation: correct 10s infinite;
 }
 
@@ -223,15 +241,16 @@ hr {
 }
 
 .guess{
-  padding-left:20px;
   font-family: 'Poppins', sans-serif;
   width: 500px;
   height: 70px;
-  font-size: 36px;
-  text-align: left;
+  font-size: 20px;
+  text-align: center;
   border-radius: 10px;
-  border: 1px solid #000000;
+  border: 1px solid #3D3D3D;
   transition: 1s all;
+  color:#3D3D3D;
+
 }
 
 .guess:hover{
@@ -241,12 +260,10 @@ hr {
 }
 
 .guess::placeholder{
-  width: 500px;
-  height: 70px;
-  font-size: 36px;
-  text-align: left;
+  font-size: 20px;
+  text-align: center;
   transition: 1s all;
-  color:#000000;
+  color:#3D3D3D;
 }
 
 
@@ -262,6 +279,21 @@ hr {
   }
   100%{
     background:#ffffff;
+  }
+}
+
+@keyframes guess-dark {
+  0%{
+    background:#000;
+  }
+  35%{
+    background:#4dae50;
+  }
+  65%{
+    background:#c69f21;
+  }
+  100%{
+    background:#000;
   }
 }
 
@@ -357,27 +389,57 @@ li{
 }
 
 .Dark{
-  background-color: 090909;
+  background-color: #101010;
   color:#ffffff;
 }
 
 .Dark .label-tile-first{
-  color:#ffffff;
-  border-color:#303030;
+  color:#A6A7A6;
+  border-color:#A6A7A6;
 }
 .Dark .label-tile{
-  color:#ffffff;
-  border-color:#303030;
+  color:#A6A7A6;
+  border-color:#A6A7A6;
 }
 
 .Dark .name-tile{
-  color:#ffffff;
-  border-color:#303030;
+  color:#A6A7A6;
+  border-color:#A6A7A6;
+  background-color: #000000;
 }
 
 .Dark .tile{
-  color:#ffffff;
-  border-color:#303030;
+  color:#A6A7A6;
+  border-color:#A6A7A6;
+  background-color: #000000;
+}
+
+.Dark .end-tile{
+  color:#A6A7A6;
+  border-color:#A6A7A6;
+  background-color: #000000;
+}
+
+.Dark .guess::placeholder{
+  color:#A6A7A6;
+}
+
+.Dark .guess{
+  background-color: #000000;
+  color:#A6A7A6;
+  border-color: #A6A7A6;
+}
+
+.Dark .guess:hover{
+  background:#000;
+  animation: guess-dark 1s linear;
+  transition:1s all;
+}
+
+.Dark .correct {
+  background-color: #4dae50;
+  color: white;
+  animation: correct 10s infinite;
 }
 
 .Light{
@@ -436,4 +498,16 @@ li{
   border:1px solid black;
 border-radius: 10px;
     padding:30px;
+}
+
+.tilebutton{
+  background:#4dae50;
+ color:white;
+ cursor:pointer;
+ padding-left:20px;
+ padding-right:20px;
+ height:50px;
+ width:60%;
+ border:none;
+ border-radius: 10px;
 }
