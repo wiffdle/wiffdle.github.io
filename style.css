@@ -273,30 +273,38 @@ hr {
 @keyframes guess {
   0%{
     background:#ffffff;
+    color:black;
   }
   35%{
     background:#4dae50;
+    color:white;
   }
   65%{
     background:#c69f21;
+    color:white;
   }
   100%{
     background:#ffffff;
+    color:black;
   }
 }
 
 @keyframes guess-dark {
   0%{
     background:#000;
+    color:#A6A7A6;
   }
   35%{
     background:#4dae50;
+    color:white;
   }
   65%{
     background:#c69f21;
+    color:white;
   }
   100%{
     background:#000;
+    color:#A6A7A6;
   }
 }
 
