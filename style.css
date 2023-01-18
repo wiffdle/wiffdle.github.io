@@ -112,6 +112,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:1s all;
 }
 
 .label-tile-first {
@@ -131,6 +132,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:1s all;
 }
 
 .tile {
@@ -149,6 +151,7 @@ hr {
   justify-content: center;
   align-items: center;
   margin-bottom:10px;
+  transition:1s all;
 }
 
 .end-tile {
@@ -167,6 +170,7 @@ hr {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom:10px;
+  transition:1s all;
 }
 
 .name-tile {
@@ -187,6 +191,7 @@ hr {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-bottom:10px;
+  transition:1s all;
 }
 
 .correct {
