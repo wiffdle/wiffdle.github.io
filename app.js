@@ -103,10 +103,6 @@ function checkmode() {
     Background.classList.add("Dark");
     Background.classList.remove("Light");
   }
-  else {
-    Background.classList.add("Light");
-    Background.classList.remove("Dark");
-  }
 }
 
 function DarkMode()
