@@ -612,7 +612,7 @@ border-radius: 10px;
 }
 
 .gameoption{
-  width:40%;
+  width:40% !important;
   object-fit: cover;
   border-radius: 30px;
   margin:40px;
@@ -621,6 +621,7 @@ border-radius: 10px;
   opacity:1;
   transition:0.3s all;
   transform: rotateZ(0deg);
+  background-color: #002927;
 }
 
 .gameoption:hover{
