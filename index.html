@@ -27,19 +27,18 @@
             </a>
         </div>
         <br/>
-        <video style="border-radius:20px;" autoplay muted loop playsinline>
-  <source src="rotateyourdevice.mp4" type="video/mp4" />
-</video>
-    <h1>Please rotate your device to begin playing!</h1>
+        <video class="rotateyourdevice" style="border-radius:20px;" autoplay muted loop playsinline>
+            <source src="rotateyourdevice.mp4" type="video/mp4" />
+        </video>
+    <h1>Please rotate your device to play</h1>
     </div>
     <div class="mainexperience">
-    <i onclick="DarkMode()" class="fa-solid fa-paint-roller"></i>    
+    <i onclick="DarkMode()" class="fa-solid fa-moon"></i>    
             <div style="margin: auto; width: 50%;">
                 <a href="javascript:window.location.href=window.location.href">
         <img src="logo.png" id="logo" style="width:300px; height:100px;"/>
                 </a>
         </div>
-        <br/>
     <p class="legal" style="margin:0px; color:#787c7e">Forked from <a target="_blank" style="color:#787c7e" href="https://github.com/vrajpatel-18/poeltl-unlimited">Poeltl Unlimited</a></p>
     <br>
     <div id="container">
@@ -55,9 +54,23 @@
         <div id="board"></div>
 
     <div class="overlay hidden"></div>
-                                       <video id="explainer" class="explainer" autoplay muted loop playsinline>
-  <source src="explainer.mp4" type="video/mp4" />
-</video>
+    <div id="explainer">
+        <div id="gamemodes">
+            <video class="gameoption dailychal" onclick="initDaily();" autoplay muted poster="dailychallenge.png">
+                <source src="dailychallenge.mp4" type="video/mp4"/>
+            </video>
+            <video class="gameoption unlimitedchal" onclick="init();" autoplay muted poster="unlimited.png">
+                <source src="unlimited.mp4" type="video/mp4"/>
+            </video>
+            <br>
+        </div>
+        <video class="explainer" autoplay muted loop playsinline>
+            <source src="explainer.mp4" type="video/mp4" />
+        </video>
+        <br>
+        <br>
+        <Br>
+    </div>
 </body>
 
 </html>
