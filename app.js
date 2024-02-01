@@ -1,7 +1,3 @@
-let siteWidth = 1280;
-let scale = screen.width / siteWidth;
-document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
-
 if (getCookie("darkmode")) {
   Background = document.querySelector("body");
   Background.classList.add("Dark");
@@ -81,6 +77,26 @@ function getRandomPlayer(){
         actual = fn();
         if(actual.number < "0") getRandomPlayer();
     }
+}
+
+function getDailyPlayer(){
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay);
+  var selectedInt = day;
+
+  while(selectedInt > playerList.length){
+    selectedInt = selectedInt - playerList.length;
+  }
+
+  let pName = playerList[selectedInt - 1].replace(/\s/g, "").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'');
+  let fn = window[pName];
+  if(typeof fn === "function"){
+      actual = fn();
+      if(actual.number < "0") getDailyPlayer();
+  }
 }
 
 
@@ -197,11 +213,42 @@ let currGuess = 0;
 let playersArray = [];
 
 
-window.onload = function(){
-    init();
+function initDaily(){
+  document.title = "Wiffdle | Daily Challenge";
+  document.getElementById("gamemodes").remove();
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay);
+  if(getCookie("dailydone") == day){
+    alert("you've already completed today's challenge");
+    location.reload();
+  }
+  getDailyPlayer();
+  setCookie('dailydone', day, '70');
+  document.getElementById("message").remove()
+  document.querySelector(".guess").classList.remove("hidden");
+  document.querySelector(".btn").classList.remove("hidden");
+  createLabel();
+  document.querySelector(".guess").addEventListener("keydown", (e) => {
+      processInput(e);
+  });
+
+
+  document.querySelector(".guess").addEventListener("input", (e) => {
+      playersArray = [];
+      if(e.target.value){
+          playersArray = playerList.filter(p => p.toLowerCase().replace(/\s/g,"").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'').includes(e.target.value.toLowerCase().replace(/\s/g,"").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'')));
+          playersArray = playersArray.map(p => `<li class="optionlist"><button id="p${playersArray.indexOf(p)}" class="option" onclick="clickGuess('${p}')">${p}</button></li>`);
+      }
+      showPlayersArray(playersArray.slice(0,5));
+  });
 }
 
 function init(){
+  document.title = "Wiffdle | Unlimited Play";
+  document.getElementById("gamemodes").remove();
   getRandomPlayer();
   document.getElementById("message").remove()
   document.querySelector(".guess").classList.remove("hidden");
@@ -216,7 +263,7 @@ function init(){
       playersArray = [];
       if(e.target.value){
           playersArray = playerList.filter(p => p.toLowerCase().replace(/\s/g,"").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'').includes(e.target.value.toLowerCase().replace(/\s/g,"").replace(/\'/g,'').replace(/\./g,'').replace(/\-/g,'')));
-          playersArray = playersArray.map(p => `<li><button id="p${playersArray.indexOf(p)}" class="option" onclick="clickGuess('${p}')">${p}</button></li>`);
+          playersArray = playersArray.map(p => `<li class="optionlist"><button id="p${playersArray.indexOf(p)}" class="option" onclick="clickGuess('${p}')">${p}</button></li>`);
       }
       showPlayersArray(playersArray.slice(0,5));
   });
@@ -291,8 +338,7 @@ function processInput(e){
 }
 
 function guess(){
-  Explainer = document.getElementById("explainer");
-  Explainer.style.display="none";
+    document.getElementById("explainer").style.display="none";
     if(currGuess <= 7){
         let guessed = guesses[currGuess];
         createRow(currGuess);
@@ -713,9 +759,9 @@ function JonahHeath(){
   return {
     name: "Jonah Heath",
     team: "Dbacks",
-    number: 7,
+    number: 9,
     league: "NL",
-    allstargameappearances: 3,
+    allstargameappearances: 1,
     worldserieswins: 2,
     started:2020
   };
