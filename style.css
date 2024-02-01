@@ -612,7 +612,7 @@ border-radius: 10px;
 }
 
 .gameoption{
-  width:40vw;
+  width:40%;
   object-fit: cover;
   border-radius: 30px;
   margin:40px;
