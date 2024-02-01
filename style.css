@@ -614,7 +614,6 @@ border-radius: 10px;
 .gameoption{
   width:40vw;
   object-fit: cover;
-  height:fit-content;
   border-radius: 30px;
   margin:40px;
   cursor:pointer;
